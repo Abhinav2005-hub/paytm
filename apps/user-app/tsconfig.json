@@ -1,6 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@repo/db": ["../../packages/db/index.ts"]
+    },
     "jsx": "preserve",
     "plugins": [{ "name": "next" }]
   },
