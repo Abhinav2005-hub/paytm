@@ -1,13 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-    content: [
-      "./app/**/*.{js,ts,jsx,tsx,mdx}",
-      "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-      "./components/**/*.{js,ts,jsx,tsx,mdx}",
-      "./src/**/*.{js,ts,jsx,tsx,mdx}",
-      "../../packages/ui/src/**/*.{js,ts,jsx,tsx,mdx}",
-    ],
-    theme: { extend: {} },
-    plugins: [],
-  };
-  
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
