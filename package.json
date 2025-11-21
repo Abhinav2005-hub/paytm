@@ -22,7 +22,9 @@
     "packages/*"
   ],
   "dependencies": {
+    "@prisma/client": "^5.15.0",
     "@tailwindcss/vite": "^4.1.17",
+    "prisma": "^5.15.0",
     "tailwindcss": "^4.1.17"
   }
 }
