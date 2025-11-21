@@ -1,10 +1,11 @@
-import { PrismaClient } from "@repo/db";
-const client = new PrismaClient();
+import { prisma } from "@repo/db";
 
-export default function Page(): JSX.Element {
+export default async function Page() {
+  const users = await prisma.user.findMany();
+
   return (
     <div className="text-2xl">
-      hi there
+      Hi there — Total users: {users.length}
     </div>
-  )
+  );
 }
