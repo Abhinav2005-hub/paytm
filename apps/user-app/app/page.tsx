@@ -1,11 +1,11 @@
-import prisma from "@repo/db";
-
 export default async function Page() {
-  const users = await prisma.user.findMany();
+  const users = await fetch("http://localhost:3000/api/users").then(res => res.json());
 
   return (
-    <div className="text-2xl">
-      Hi there — Total users: {users.length}
+    <div>
+      {users.map(u => (
+        <p key={u.id}>{u.name}</p>
+      ))}
     </div>
   );
 }
