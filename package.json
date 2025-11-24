@@ -1,6 +1,7 @@
 {
   "name": "paytm",
   "private": true,
+
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -8,23 +9,23 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
+
   "devDependencies": {
     "prettier": "^3.6.2",
     "turbo": "^2.5.8",
     "typescript": "5.9.2"
   },
+
   "engines": {
     "node": ">=18"
   },
+
   "packageManager": "npm@10.8.3",
+
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "dependencies": {
-    "@prisma/client": "^5.15.0",
-    "@tailwindcss/vite": "^4.1.17",
-    "prisma": "^5.15.0",
-    "tailwindcss": "^4.1.17"
-  }
+
+  "dependencies": {}
 }
