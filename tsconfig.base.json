@@ -1,10 +1,10 @@
-
 {
-    "compilerOptions": {
-      "baseUrl": ".",
-      "paths": {
-        "@repo/db": ["packages/db"]
-      }
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+      "next-auth/*": ["node_modules/next-auth/*"]
     }
   }
-  
+}
+
