@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "types": ["node", "react", "react-dom", "next"],
     "paths": {
       "@repo/db": ["../../packages/db/index.ts"]
     },

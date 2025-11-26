@@ -1,7 +1,11 @@
 {
   "name": "paytm",
   "private": true,
-
+  "packageManager": "npm@10.8.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
@@ -9,23 +13,28 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
   },
-
   "devDependencies": {
+    "@types/next": "^8.0.7",
+    "@types/next-auth": "^3.13.0",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
     "prettier": "^3.6.2",
-    "turbo": "^2.5.8",
-    "typescript": "5.9.2"
+    "turbo": "^2.6.1",
+    "typescript": "^5.9.2"
   },
-
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "@tailwindcss/postcss": "4.1.17",
+    "autoprefixer": "10.4.21",
+    "next": "^16.0.4",
+    "next-auth": "^4.24.13",
+    "postcss": "8.5.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "4.1.16"
+  },
   "engines": {
     "node": ">=18"
-  },
-
-  "packageManager": "npm@10.8.3",
-
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
-
-  "dependencies": {}
+  }
 }
