@@ -1,11 +1,24 @@
-export default async function Page() {
-  const users = await fetch("http://localhost:3000/api/users").then(res => res.json());
+"use client";
+
+import { signIn, signOut, useSession } from "next-auth/react";
+import { Appbar } from "@repo/ui/appbar";
+
+export default function Page() {
+  const session = useSession();
+
+  // Define the Signin function
+  const Signin = () => {
+    signIn();
+  };
+
+  // Define the Signout function
+  const Signout = () => {
+    signOut();
+  };
 
   return (
     <div>
-      {users.map(u => (
-        <p key={u.id}>{u.name}</p>
-      ))}
+      <Appbar onSignin={Signin} onSignout={Signout} user={session.data?.user} />
     </div>
   );
 }
