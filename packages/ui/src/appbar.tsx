@@ -1,28 +1,25 @@
-"use client";
+import { Button } from "./button";
 
-import React from "react";
+interface AppbarProps {
+  user?:{
+    user?: string | null;
+  },
+  //TODO: can you figure out what type should be here
+  onSignin: any,
+  onSignout: any
+}
 
-export function Appbar({
-  onSignin,
-  onSignout,
+export const Appbar = ({
   user,
-}: {
-  onSignin: () => void;
-  onSignout: () => void;
-  user?: any;
-}) {
-  return (
-    <div style={{ padding: "10px", background: "#eee" }}>
-      <h2>Appbar</h2>
-
-      {user ? (
-        <>
-          <p>Hello, {user.name}</p>
-          <button onClick={onSignout}>Sign out</button>
-        </>
-      ) : (
-        <button onClick={onSignin}>Sign in</button>
-      )}
+  onSignin,
+  onSignout
+}: AppbarProps) => {
+  return <div className="flex justify-between border-b px-4">
+    <div className="text-lg flex flex-col justify-center">
+      PayTM
     </div>
-  );
+    <div className="flex flex-col justify-center pt-2">
+      <Button onClick={user ? onSignout : onSignin}>{user ? "Logout" : "Login"}</Button>
+    </div>
+  </div>
 }
