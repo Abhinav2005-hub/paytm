@@ -7,14 +7,16 @@
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "moduleResolution": "Bundler",
+
+    "moduleResolution": "Node",
+
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
 
+    // React + Next types
     "jsx": "preserve",
     "types": ["node", "react", "react-dom", "next"],
-
     "baseUrl": ".",
     "paths": {
       "@repo/db": ["../../packages/db/index.ts"],
@@ -31,7 +33,5 @@
     ".next/types/**/*.ts"
   ],
 
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

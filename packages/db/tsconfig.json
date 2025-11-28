@@ -1,11 +1,10 @@
 {
-    "extends": "../../tsconfig.base.json",
-    "compilerOptions": {
-      "composite": true,
-      "outDir": "dist",
-      "skipLibCheck": true
-    },
-    "include": ["index.ts", "prisma/**/*.prisma"],
-    "exclude": ["node_modules"]
-  }
-  
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist",
+    "skipLibCheck": true
+  },
+  "include": ["index.ts", "prisma/**/*.prisma"],
+  "exclude": ["node_modules"]
+}
