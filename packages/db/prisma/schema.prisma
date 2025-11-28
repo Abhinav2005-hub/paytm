@@ -44,7 +44,8 @@ model OnRampTransaction {
   amount   Int
   provider String
   status   String @default("Processing")
-
+  token    String
+  
   userId Int
   user   User @relation(fields: [userId], references: [id])
 }
