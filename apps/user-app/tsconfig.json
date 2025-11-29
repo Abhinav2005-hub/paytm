@@ -7,16 +7,15 @@
     "allowJs": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
-
     "moduleResolution": "Node",
-
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
 
-    // React + Next types
-    "jsx": "preserve",
-    "types": ["node", "react", "react-dom", "next"],
+    "jsx": "react-jsx",
+
+    "types": ["node", "react", "react-dom", "next", "next-auth"],
+
     "baseUrl": ".",
     "paths": {
       "@repo/db": ["../../packages/db/index.ts"],
@@ -27,9 +26,10 @@
   },
 
   "include": [
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next-env.d.ts",
+    "types",
     ".next/types/**/*.ts"
   ],
 

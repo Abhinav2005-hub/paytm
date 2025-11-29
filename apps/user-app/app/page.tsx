@@ -9,9 +9,9 @@ export default function Page() {
   return (
     <div>
       <Appbar
-        onSignin={() => signIn()}
-        onSignout={() => signOut()}
         user={session?.user ?? null}
+        onSignin={() => signIn("credentials")}
+        onSignout={() => signOut()}
       />
     </div>
   );
