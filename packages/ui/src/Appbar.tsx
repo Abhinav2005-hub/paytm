@@ -15,7 +15,7 @@ export const Appbar = ({ user, onSignin, onSignout }: AppbarProps) => {
         PayTM
       </div>
 
-      <div className="flex flex-col justify-center bg-[#000]" style={{backgroundColor: "#blue"}}>
+      <div className="flex flex-col justify-center" style={{ backgroundColor: "blue" }}>
         <Button onClick={user ? onSignout : onSignin}>
           {user ? "Logout" : "Login"}
         </Button>

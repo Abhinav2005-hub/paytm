@@ -81,9 +81,5 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
-
-    async redirect() {
-      return "http://localhost:3000"; // fix redirect to port 3001
-    },
   },
 };
