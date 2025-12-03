@@ -9,19 +9,22 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const { data: session } = useSession();
 
   return (
-    <div>
-      {/* TOP APPBAR WITH LOGOUT BUTTON */}
-      <Appbar
-        user={session?.user ?? null}
-        onSignin={() => signIn("credentials")}
-        onSignout={() => signOut()}
-      />
+    <div className="min-h-screen">
+      {/* TOP APPBAR (Fixed) */}
+      <div className="fixed top-0 left-0 right-0 z-20">
+        <Appbar
+          user={session?.user ?? null}
+          onSignin={() => signIn("credentials")}
+          onSignout={() => signOut()}
+        />
+      </div>
 
-      {/* Main layout */}
-      <div className="flex">
+      {/* MAIN */}
+      <div className="flex pt-[70px]"> 
+        {/* 70px = Appbar height */}
 
-        {/* Sidebar */}
-        <div className="w-64 border-r h-screen p-6 bg-gray-50 pt-20 fixed left-0 top-12">
+        {/* SIDEBAR */}
+        <div className="w-60 fixed left-0 top-[70px] h-screen border-r bg-gray-50 p-6">
           <h2 className="text-xl font-bold mb-4">Menu</h2>
 
           <div className="flex flex-col gap-3">
@@ -35,8 +38,10 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </div>
         </div>
 
-        {/* Page Content */}
-        <div className="flex-1 pt-20 ml-64 p-6">{children}</div>
+        {/* PAGE CONTENT */}
+        <div className="ml-60 w-full p-8">
+          {children}
+        </div>
       </div>
     </div>
   );
