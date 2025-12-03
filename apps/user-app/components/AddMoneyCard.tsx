@@ -30,12 +30,12 @@ export const AddMoney = () => {
                 key: x.name,
                 value: x.name
             }))} />
-            <div className="flex justify-center pt-4">
-                <Button onClick={() => {
-                    window.location.href = redirectUrl || "";
-                }}>
-                    Add Money
-                </Button>
+            <div className="pt-4 px-4 flex justify-center">
+               <Button className="px-6 py-2 bg-black text-white rounded"
+               onClick={() => window.location.href = redirectUrl || ""}
+               >
+                Add Money
+               </Button>
             </div>
         </div>
     </Card>
