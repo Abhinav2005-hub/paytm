@@ -5,6 +5,26 @@ import { Appbar } from "@repo/ui/Appbar";
 import { useSession, signIn, signOut } from "next-auth/react";
 import "../global.css";
 
+// Add p2p 
+function P2PTransferIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className="w-5 h-5"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25"
+      />
+    </svg>
+  );
+}
+
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const { data: session } = useSession();
 
@@ -34,6 +54,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
             <a href="/dashboard/transactions" className="hover:text-blue-500">
               Transactions
+            </a>
+
+            <a href="/dashboard/p2p" className="hover:text-blue-500 flex items-center gap-2">
+              <P2PTransferIcon />
+              P2P Transfer
             </a>
           </div>
         </div>
