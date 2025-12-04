@@ -4,7 +4,7 @@ import db from "@repo/db";
 const app = express();
 app.use(express.json());
 
-app.post("/hdfcbewbhooook", async (req, res) => {
+app.post("/hdfcwebhook", async (req, res) => {
   const paymentInformation = {
     token: req.body.token,
     userId: req.body.userIdentifier,
@@ -35,4 +35,6 @@ app.post("/hdfcbewbhooook", async (req, res) => {
   }
 });
 
-app.listen(3003);
+app.listen(3003, () => {
+  console.log("Webhook server running on http://localhost:3003");
+});
